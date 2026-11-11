@@ -1,0 +1,13 @@
+<h1>Reto 2</h1>
+@for (producto of productos; track producto.id){
+    <h2>{{producto.nombre}}</h2>
+    <p>Categoria: {{producto.categoria}}</p>
+    <p>Precio: {{producto.precio}}</p>
+@if (producto.precio > 100000){
+    <p>Este producto es costoso...</p>
+  }@else {
+    @if (producto.precio < 100000) {
+        <p>Este producto esta barato...</p>
+    }
+  }
+}

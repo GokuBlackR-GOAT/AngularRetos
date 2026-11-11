@@ -1,0 +1,22 @@
+<h1>Reto 1</h1>
+<h3>numero 1</h3>
+<input type="number" [(ngModel)]="numero1">
+<br><br><br>
+
+<h3>numero 2</h3>
+<input type="number" [(ngModel)]="numero2">
+
+<br><br>
+
+<button (click)="sumar()">Sumar</button>
+<br><br>
+<button (click)="restar()">restar</button>
+
+
+@if (mensaje) {
+    <p>{{mensaje}}</p>
+}
+
+@if (resultado !== null){
+<h2>Resutado: {{resultado}}</h2>
+}

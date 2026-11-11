@@ -1,0 +1,33 @@
+<h1>Reto 3</h1>
+<br><br>
+<label>nombre</label>
+<input [(ngModel)]="nombre">
+<br><br>
+<label>programa</label>
+<input [(ngModel)]="programa">
+<br><br>
+<label>edad</label>
+<input type="number" [(ngModel)]="edad">
+
+<br><br>
+<button (click)="registrar()">Registrarse</button>
+
+<p>{{mensaje}}</p>
+
+<br><br><br>
+<h3>Estudiantes Registrados</h3>
+<ul>
+    @for (estudiante of estudiantes; track estudiante.id){
+        <li>
+            Nombre: {{estudiante.nombre}}
+        </li>
+        <li>
+            Programa: {{estudiante.programa}}
+        </li>
+        <li>
+            Edad: {{estudiante.edad}}
+        </li>
+    } @empty {
+        <li>No hay nadie registrado</li>
+    }
+</ul>

@@ -1,0 +1,17 @@
+<h1>Reto 4</h1>
+<br><br>
+<button (click)="cambiarrojo()">Rojo</button>
+<br><br>
+<button (click)="cambiaramarillo()">Amarillo</button>
+<br><br>
+<button (click)="cambiarverde()">Verde</button>
+
+<br><br>
+
+@if (color){
+    <div [style.backgroundColor]="color"></div>
+    <br><br>
+    <h2>{{mensaje}}</h2>
+} @else {
+    <p>elija un color...</p>
+}

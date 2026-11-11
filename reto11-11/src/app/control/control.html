@@ -1,0 +1,35 @@
+<h1>Reto 5</h1>
+
+<label>Nombre del producto</label>
+<input [(ngModel)]="nombre">
+
+<br><br>
+
+<label>Cantidad</label>
+<input type="number" [(ngModel)]="cantidad" min="0">
+
+<br><br>
+
+<label>Precio</label>
+<input type="number" [(ngModel)]="precio" min="0">
+
+<br><br>
+
+<button (click)="agregar()">Agregar producto</button>
+
+<p>{{mensaje}}</p>
+
+<h2>Lista</h2>
+
+@for (producto of productos; track producto.id) {
+  <p>Nombre: {{producto.nombre}}</p>
+  <p>Cantidad: {{producto.cantidad}}</p>
+  <p>Precio: ${{producto.precio}}</p>
+  <p>Total: ${{producto.cantidad * producto.precio}}</p>
+
+  <button (click)="eliminar(producto.id)">Eliminar</button>
+
+  <hr>
+} @empty {
+  <p>Esta vacio.</p>
+}
